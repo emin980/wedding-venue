@@ -21,28 +21,28 @@
     },
     "henna": {
       "name": "Kına Gecesi",
-      "date": "9 Temmuz 2026",
-      "time": "19:00",
-      "venue": "Hotel Adanava",
-      "address": "Girne Blv. No:254, Yüreğir / Adana",
+      "date": "6 Haziran 2026",
+      "time": "17:00",
+      "venue": "Yomra Nikah Salonu",
+      "address": "Yomra Belediyesi, Sancak, Hükümet Cd. No:17, 61250 Yomra/Trabzon",
       "coordinates": {
-        "lat": 37.01,
-        "lng": 35.31
+        "lat": 41.66554713453113,
+        "lng": 39.926093472225574
       },
-      "maps_url": "https://www.google.com/maps/search/Hotel+Adanava+Adana",
+      "maps_url": "https://www.google.com/maps/search/Yomra+Belediyesi",
       "whatsapp_url": "https://wa.me/90"
     },
     "wedding": {
       "name": "Düğün Töreni",
-      "date": "11 Temmuz 2026",
-      "time": "18:00",
-      "venue": "Tuana Kır Düğün Salonu",
-      "address": "Batı Raman Blv. 72070, Batman",
+      "date": "27 Haziran 2026",
+      "time": "17:00",
+      "venue": "Erkek Evi",
+      "address": "Eyüp Sultan, 5549. Sk. No:81, 80010 Osmaniye Merkez/Osmaniye",
       "coordinates": {
-        "lat": 37.88,
-        "lng": 41.54
+        "lat": 37.05783498655373,
+        "lng": 36.25531375419294
       },
-      "maps_url": "https://www.google.com/maps/search/Tuana+Kır+Düğün+Salonu+Batman",
+      "maps_url": "https://www.google.com/maps/search/5549. Sk. No:81",
       "whatsapp_url": "https://wa.me/90"
     }
   },
@@ -51,40 +51,40 @@
       "side": "Gelin Ailesi",
       "members": [
         {
-          "name": "Perihan Ölmezoğlu",
+          "name": "Samiye Oran",
           "role": "Anne"
         },
         {
-          "name": "Ziya Ölmezoğlu",
+          "name": "Murat Oran",
           "role": "Baba"
         }
       ],
       "contact": {
-        "phone": "+90 XXX XXX XXXX",
-        "email": "bride.family@example.com"
+        "phone": "+90 532 789 6402",
+        "email": "eminaltinisik98@gmail.com"
       }
     },
     "groom": {
       "side": "Damat Ailesi",
       "members": [
         {
-          "name": "Sezer Kaplan",
+          "name": "Nurten Altınışık",
           "role": "Anne"
         },
         {
-          "name": "Selim Kaplan",
+          "name": "Necati Altınışık",
           "role": "Baba"
         }
       ],
       "contact": {
-        "phone": "+90 XXX XXX XXXX",
-        "email": "groom.family@example.com"
+        "phone": "+90 532 789 6402",
+        "email": "eminaltinisik98@gmail.com"
       }
     }
   },
   "rsvp": {
     "enabled": true,
-    "adminEmail": "admin@example.com",
+    "adminEmail": "eminaltinisik98@gmail.com",
     "formspreeId": "YOUR_FORMSPREE_ID"
   },
   "colors": {
