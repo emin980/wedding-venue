@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Düğün Davetiyesi">
+    <title>Muhammed Emin & Büşra - Düğün Davetiyesi 2026</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page - Davetiye Zarfı -->
+    <div id="envelope-container" class="envelope-container">
+        <div class="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-flap"></div>
+            <div class="envelope-body">
+                <div class="envelope-content">
+                    <div class="seal">
+                        <span id="initials">S & M</span>
+                    </div>
+                </div>
+            </div>
+            <div class="envelope-text">
+                <p id="envelope-subtitle">Davetiyenizi açmak için tıklayın</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Header -->
+        <section id="header" class="section header">
+            <div class="container">
+                <div class="header-content">
+                    <p class="date-year" id="year-text">DÜĞÜN DAVETİYESİ · 2026</p>
+                    <h1 class="couple-name">
+                        <span id="bride-name">Sümeyye</span>
+                        <span class="separator">✦</span>
+                        <span id="groom-name">Mehmet Bilal</span>
+                    </h1>
+                    <p class="location-text" id="location-text">2026 · Batman</p>
+                    <button class="details-btn" id="details-btn">Detayları Gör</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Invitation Message -->
+        <section id="invitation" class="section invitation">
+            <div class="container">
+                <h2 class="section-title">Davet</h2>
+                <p class="invitation-message" id="invitation-message">
+                    Bu mutlu günümüzde siz sevdiklerimizi de aramızda görmekten büyük mutluluk duyarız.
+                </p>
+                <p class="invitation-note">
+                    Yer, konum ve zamanı aşağıya kaydırarak görüntüleyebilirsiniz.
+                </p>
+            </div>
+        </section>
+
+        <!-- Families Section -->
+        <section id="families" class="section families">
+            <div class="container">
+                <h2 class="section-title">Ailelerimiz</h2>
+                <div class="families-grid">
+                    <div class="family-side bride-family">
+                        <h3 id="bride-side-title">Gelin Ailesi</h3>
+                        <div id="bride-members" class="family-members">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                    <div class="family-side groom-family">
+                        <h3 id="groom-side-title">Damat Ailesi</h3>
+                        <div id="groom-members" class="family-members">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ceremonies Section -->
+        <section id="ceremonies" class="section ceremonies">
+            <div class="container">
+                <div id="marriage-ceremony" class="ceremony-item">
+                    <h2 class="ceremony-title" id="marriage-name">Nikah Merasimi</h2>
+                    <div class="ceremony-details">
+                        <div class="detail-row">
+                            <span class="detail-label">📅 Tarih:</span>
+                            <span class="detail-value" id="marriage-date">21 Haziran 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">⏰ Saat:</span>
+                            <span class="detail-value" id="marriage-time">13:45</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">📍 Mekan:</span>
+                            <span class="detail-value" id="marriage-venue">Etimesgut Belediyesi Ata Kongre Kültür Merkezi</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">📮 Adres:</span>
+                            <span class="detail-value" id="marriage-address">Etimesgut / Ankara</span>
+                        </div>
+                        <div class="ceremony-actions">
+                            <a id="marriage-map" href="#" class="action-btn map-btn" target="_blank">Haritada Aç</a>
+                            <a id="marriage-whatsapp" href="#" class="action-btn whatsapp-btn" target="_blank">WhatsApp Konum</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="henna-ceremony" class="ceremony-item">
+                    <h2 class="ceremony-title" id="henna-name">Kına Gecesi</h2>
+                    <div class="ceremony-details">
+                        <div class="detail-row">
+                            <span class="detail-label">📅 Tarih:</span>
+                            <span class="detail-value" id="henna-date">9 Temmuz 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">⏰ Saat:</span>
+                            <span class="detail-value" id="henna-time">19:00</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">📍 Mekan:</span>
+                            <span class="detail-value" id="henna-venue">Hotel Adanava</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">📮 Adres:</span>
+                            <span class="detail-value" id="henna-address">Girne Blv. No:254, Yüreğir / Adana</span>
+                        </div>
+                        <div class="ceremony-actions">
+                            <a id="henna-map" href="#" class="action-btn map-btn" target="_blank">Haritada Aç</a>
+                            <a id="henna-whatsapp" href="#" class="action-btn whatsapp-btn" target="_blank">WhatsApp Konum</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="wedding-ceremony" class="ceremony-item">
+                    <h2 class="ceremony-title" id="wedding-name">Düğün Töreni</h2>
+                    <div class="ceremony-details">
+                        <div class="detail-row">
+                            <span class="detail-label">📅 Tarih:</span>
+                            <span class="detail-value" id="wedding-date">11 Temmuz 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">⏰ Saat:</span>
+                            <span class="detail-value" id="wedding-time">18:00</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">📍 Mekan:</span>
+                            <span class="detail-value" id="wedding-venue">Tuana Kır Düğün Salonu</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">📮 Adres:</span>
+                            <span class="detail-value" id="wedding-address">Batı Raman Blv. 72070, Batman</span>
+                        </div>
+                        <div class="ceremony-actions">
+                            <a id="wedding-map" href="#" class="action-btn map-btn" target="_blank">Haritada Aç</a>
+                            <a id="wedding-whatsapp" href="#" class="action-btn whatsapp-btn" target="_blank">WhatsApp Konum</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section id="countdown" class="section countdown">
+            <div class="container">
+                <h2 class="section-title">O Güne Ne Kadar Kaldı?</h2>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Gün</span>
+                    </div>
+                    <span class="countdown-separator">:</span>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Saat</span>
+                    </div>
+                    <span class="countdown-separator">:</span>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Dakika</span>
+                    </div>
+                    <span class="countdown-separator">:</span>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Saniye</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="section rsvp">
+            <div class="container">
+                <h2 class="section-title">Katılım Bildirimi</h2>
+                <form id="rsvp-form" class="rsvp-form" method="POST">
+                    <div class="form-group">
+                        <label for="guest-name">Adınız:</label>
+                        <input type="text" id="guest-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-email">Email:</label>
+                        <input type="email" id="guest-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-phone">Telefon:</label>
+                        <input type="tel" id="guest-phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance">Etkinliklere Katılacağınız:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="ceremonies" value="marriage"> Nikah Merasimi
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="ceremonies" value="henna"> Kına Gecesi
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="ceremonies" value="wedding"> Düğün Töreni
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-message">Mesaj (Opsiyonel):</label>
+                        <textarea id="guest-message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Gönder</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section id="share" class="section share">
+            <div class="container">
+                <h2 class="section-title">Paylaşın</h2>
+                <div class="share-content">
+                    <p>Sevincimizi paylaşmanız dileğiyle</p>
+                    <div class="share-buttons">
+                        <button id="share-whatsapp" class="share-btn whatsapp-share">WhatsApp'ta Paylaş</button>
+                        <button id="share-copy" class="share-btn copy-share">Linki Kopyala</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p id="footer-text">Sümeyye & Mehmet Bilal · 2026 · Batman</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

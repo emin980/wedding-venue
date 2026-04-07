@@ -1,0 +1,99 @@
+{
+  "couple": {
+    "bride": "Büşra Oran",
+    "groom": "Muhammed Emin Altınışık"
+  },
+  "year": 2026,
+  "invitationMessage": "Bu mutlu günümüzde siz sevdiklerimizi de aramızda görmekten büyük mutluluk duyarız.",
+  "ceremonies": {
+    "marriage": {
+      "name": "Nikah Merasimi",
+      "date": "6 Haziran 2026",
+      "time": "17:00",
+      "venue": "Yomra Nikah Salonu",
+      "address": "Yomra Belediyesi, Sancak, Hükümet Cd. No:17, 61250 Yomra/Trabzon",
+      "coordinates": {
+        "lat": 41.66554713453113,
+        "lng": 39.926093472225574
+      },
+      "maps_url": "https://www.google.com/maps/search/Yomra+Belediyesi",
+      "whatsapp_url": "https://wa.me/90"
+    },
+    "henna": {
+      "name": "Kına Gecesi",
+      "date": "9 Temmuz 2026",
+      "time": "19:00",
+      "venue": "Hotel Adanava",
+      "address": "Girne Blv. No:254, Yüreğir / Adana",
+      "coordinates": {
+        "lat": 37.01,
+        "lng": 35.31
+      },
+      "maps_url": "https://www.google.com/maps/search/Hotel+Adanava+Adana",
+      "whatsapp_url": "https://wa.me/90"
+    },
+    "wedding": {
+      "name": "Düğün Töreni",
+      "date": "11 Temmuz 2026",
+      "time": "18:00",
+      "venue": "Tuana Kır Düğün Salonu",
+      "address": "Batı Raman Blv. 72070, Batman",
+      "coordinates": {
+        "lat": 37.88,
+        "lng": 41.54
+      },
+      "maps_url": "https://www.google.com/maps/search/Tuana+Kır+Düğün+Salonu+Batman",
+      "whatsapp_url": "https://wa.me/90"
+    }
+  },
+  "families": {
+    "bride": {
+      "side": "Gelin Ailesi",
+      "members": [
+        {
+          "name": "Perihan Ölmezoğlu",
+          "role": "Anne"
+        },
+        {
+          "name": "Ziya Ölmezoğlu",
+          "role": "Baba"
+        }
+      ],
+      "contact": {
+        "phone": "+90 XXX XXX XXXX",
+        "email": "bride.family@example.com"
+      }
+    },
+    "groom": {
+      "side": "Damat Ailesi",
+      "members": [
+        {
+          "name": "Sezer Kaplan",
+          "role": "Anne"
+        },
+        {
+          "name": "Selim Kaplan",
+          "role": "Baba"
+        }
+      ],
+      "contact": {
+        "phone": "+90 XXX XXX XXXX",
+        "email": "groom.family@example.com"
+      }
+    }
+  },
+  "rsvp": {
+    "enabled": true,
+    "adminEmail": "admin@example.com",
+    "formspreeId": "YOUR_FORMSPREE_ID"
+  },
+  "colors": {
+    "primary": "#D4AF37",
+    "secondary": "#C0C0C0",
+    "accent": "#F5E6D3",
+    "text": "#333333",
+    "textLight": "#666666",
+    "background": "#FEFDFB",
+    "border": "#E8DCC8"
+  }
+}
