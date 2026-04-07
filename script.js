@@ -3,20 +3,27 @@ let config = {};
 
 document.addEventListener('DOMContentLoaded', () => {
     loadConfig();
-    setupEnvelope();
-    initializeCountdown();
-    setupEventListeners();
 });
 
 // Load configuration from JSON
 function loadConfig() {
     fetch('config.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error('Config yükleme hatası');
+            return response.json();
+        })
         .then(data => {
             config = data;
+            console.log('Config yüklendi:', config);
             populateContent();
+            setupEnvelope();
+            initializeCountdown();
+            setupEventListeners();
         })
-        .catch(error => console.error('Error loading config:', error));
+        .catch(error => {
+            console.error('Error loading config:', error);
+            alert('Config.json yüklenemedi! Dosya var mı kontrol et.');
+        });
 }
 
 // Populate content from config
