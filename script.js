@@ -163,24 +163,61 @@ function setupEnvelope() {
 
 // Countdown timer
 function initializeCountdown() {
-    function updateCountdown() {
-        const weddingDate = new Date(config.ceremonies.wedding.date.split(' ')[0] + ' ' + 
-                                     config.ceremonies.wedding.date.split(' ')[1] + ' ' + 
-                                     config.ceremonies.wedding.date.split(' ')[2]);
-        
-        // Parse date properly (e.g., "11 Temmuz 2026")
+    const ceremonies = ['marriage', 'henna', 'wedding'];
+    
+    function updateAllCountdowns() {
         const months = {
             'Ocak': 0, 'Şubat': 1, 'Mart': 2, 'Nisan': 3,
             'Mayıs': 4, 'Haziran': 5, 'Temmuz': 6, 'Ağustos': 7,
             'Eylül': 8, 'Ekim': 9, 'Kasım': 10, 'Aralık': 11
         };
 
-        const parts = config.ceremonies.wedding.date.split(' ');
+        ceremonies.forEach(ceremony => {
+            const ceremonyData = config.ceremonies[ceremony];
+            const parts = ceremonyData.date.split(' ');
+            const day = parseInt(parts[0]);
+            const monthName = parts[1];
+            const year = parseInt(parts[2]);
+            const month = months[monthName];
+            
+            const ceremonyTime = ceremonyData.time.split(':');
+            const ceremonyDate = new Date(year, month, day, parseInt(ceremonyTime[0]), parseInt(ceremonyTime[1]));
+            const now = new Date();
+            const diff = ceremonyDate - now;
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById(`${ceremony}-days`).textContent = String(days).padStart(2, '0');
+                document.getElementById(`${ceremony}-hours`).textContent = String(hours).padStart(2, '0');
+                document.getElementById(`${ceremony}-minutes`).textContent = String(minutes).padStart(2, '0');
+            } else {
+                document.getElementById(`${ceremony}-days`).textContent = '00';
+                document.getElementById(`${ceremony}-hours`).textContent = '00';
+                document.getElementById(`${ceremony}-minutes`).textContent = '00';
+            }
+        });
+
+        // Ana countdown (Düğün)
+        updateMainCountdown();
+    }
+
+    function updateMainCountdown() {
+        const weddingData = config.ceremonies.wedding;
+        const months = {
+            'Ocak': 0, 'Şubat': 1, 'Mart': 2, 'Nisan': 3,
+            'Mayıs': 4, 'Haziran': 5, 'Temmuz': 6, 'Ağustos': 7,
+            'Eylül': 8, 'Ekim': 9, 'Kasım': 10, 'Aralık': 11
+        };
+
+        const parts = weddingData.date.split(' ');
         const day = parseInt(parts[0]);
         const monthName = parts[1];
         const year = parseInt(parts[2]);
         
-        const weddingTime = config.ceremonies.wedding.time.split(':');
+        const weddingTime = weddingData.time.split(':');
         const month = months[monthName];
         
         const wedding = new Date(year, month, day, parseInt(weddingTime[0]), parseInt(weddingTime[1]));
@@ -205,8 +242,8 @@ function initializeCountdown() {
         }
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    updateAllCountdowns();
+    setInterval(updateAllCountdowns, 1000);
 }
 
 // Setup event listeners
